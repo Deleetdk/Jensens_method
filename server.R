@@ -107,7 +107,7 @@ shinyServer(function(input, output) {
     #plot
     ggplot(d_long2, aes(value, change, color = variable)) +
       geom_point() +
-      geom_smooth(method = "lm", se = F, fullrange = T, linetype = "dashed") +
+      geom_smooth(method = "lm", se = F, fullrange = T) +
       scale_color_discrete(labels = c("general factor", 
                            "group factor 1",
                            "group factor 2",
@@ -115,7 +115,8 @@ shinyServer(function(input, output) {
                            "specificity")
                            ) +
       xlab("Factor loading") + ylab("Change in scores") +
-      scale_x_continuous(breaks = seq(0, 1, .05))
+      scale_x_continuous(breaks = seq(0, 1, .05)) +
+      scale_y_continuous(breaks = seq(-30, 30, 1))
     
   })
   
