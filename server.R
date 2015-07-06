@@ -11,6 +11,7 @@ library(plyr)
 library(reshape)
 library(scales)
 library(DT)
+library(stringr)
 
 shinyServer(function(input, output) {
   
