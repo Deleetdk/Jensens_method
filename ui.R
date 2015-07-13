@@ -66,7 +66,10 @@ shinyUI(fluidPage(
         tabPanel("Correlation matrix",
                  HTML("<p>The table below shows the correlations between the factor loadings and the change in indicator scores. The exact Jensen coefficients are shown in the row/column <em>change</em>.</p>"),
                  DT::dataTableOutput("table")
-        )
+        ),
+        tabPanel("Structure tabel",
+                 HTML("<p>The table below shows the factor loadings and is the tabular form of the data showed in the <em>Structure</em> tab.</p>"),
+                 DT::dataTableOutput("table2"))
       ),
       HTML("Made by <a href='http://emilkirkegaard.dk'>Emil O. W. Kirkegaard</a> using <a href='http://shiny.rstudio.com/'/>Shiny</a> for <a href='http://en.wikipedia.org/wiki/R_%28programming_language%29'>R</a>. Source code available on <a href='https://github.com/Deleetdk/Jensens_method'>Github</a>.")
     )

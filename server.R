@@ -136,5 +136,22 @@ shinyServer(function(input, output) {
                  ordering = F,
                  paging = F,
                  info = F))
+  
+  output$table2 = DT::renderDataTable({
+    #fetch data
+    d = reac_d()
+    d$change = d$time_2 - d$time_1
+    d$time_1 = NULL
+    d$time_2 = NULL
+#     colnames(d) = c("general factor", "group factor 1", "group factor 2", "group factor 3",
+#                     "specificity", "change")
+    
+    
+    return(d)
+  },
+  options = list(searching = F,
+                 ordering = F,
+                 paging = F,
+                 info = F))
 
 })
