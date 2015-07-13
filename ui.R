@@ -67,7 +67,7 @@ shinyUI(fluidPage(
                  HTML("<p>The table below shows the correlations between the factor loadings and the change in indicator scores. The exact Jensen coefficients are shown in the row/column <em>change</em>.</p>"),
                  DT::dataTableOutput("table")
         ),
-        tabPanel("Structure tabel",
+        tabPanel("Structure table",
                  HTML("<p>The table below shows the factor loadings and is the tabular form of the data showed in the <em>Structure</em> tab.</p>"),
                  DT::dataTableOutput("table2"))
       ),
