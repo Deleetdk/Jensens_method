@@ -12,6 +12,7 @@ library(reshape)
 library(scales)
 library(DT)
 library(stringr)
+theme_set(theme_bw())
 
 shinyServer(function(input, output) {
   
